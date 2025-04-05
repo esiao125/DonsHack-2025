@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Request Page </title>
+    <meta charset="utf-8" />
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	  <!-- link the webpage's stylesheet -->
+	  <link rel="stylesheet" href="submission_page.css" />
+
+	  <!-- link the webpage's JavaScript file -->
+	  <script src="submission_page.js" defer>
+
+    </script>
+
+
+  </head>
+  
+  <body>
+    <main>
+      <header>
+      <h1>Facilities Requests</h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="submission_page.html">Home</a>
+          </li>
+          <li>
+            <a href="display_page.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <p>Location</p>
+      <form id="form">
+        <select name="place" id="place" required>
+          <option value="" disabled selected>Select the location</option>
+          <option value="Welch" required>Welch Field</option>
+          <option value="Fromm" required>Fromm Hall</option>
+          <option value="Gillson" required>Gillson Hall</option>
+          <option value="Hayes_Healy" required>Hayes_Healy Hall</option>
+          <option value="Loyola" required>Loyola</option>
+          <option value="LMmain" required>LMmain</option>
+          <option value="LMnorth" required>LMnorth</option>
+          <option value="Toler" required>Toler</option>
+          <option value="Fulton_house" required>Fulton_house</option>
+          <option value="Fulton_cottage" required>Fulton_cottage</option>
+          <option value="Koret" required>Koret</option>
+          <option value="Sobrato" required>Sobrato</option>
+          <option value="Gleeson" required>Gleeson</option>
+          <option value="Harney" required>Harney</option>
+          <option value="LoSchiavo" required>LoSchiavo</option>
+          <option value="Cowell" required>Cowell</option>
+          <option value="Malloy" required>Malloy</option>
+          <option value="Education" required>Education</option>
+          <option value="UC" required>UC</option>
+          <option value="K_hall" required>K_hall</option>
+          <option value="Masonic" required>Masonic</option>
+          <option value="Other" required>Other</option>
+        </select>
+       
+       <label>
+          Please enter the issue you are reporting below
+        <textarea id="issue" name="description" placeholder="Please describe the issue" required></textarea>
+        </label>
+        <button type="submit" id="button">Submit</button>
+      </form>
+      <p id = "jsonText"></p>
+      <p id="submitted">Request Submitted</p>
+
+    </main>
+  </body>
+</html> 
