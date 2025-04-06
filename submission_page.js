@@ -19,7 +19,7 @@ if(form){
             var link = document.createElement('a');
             link.href = URL.createObjectURL(jsonBlob);
             link.download = 'user_data.json';
-            //link.click();  // Trigger the download automatically
+            link.click();  // Trigger the download automatically
 
             // Save the data in localStorage for later use
             localStorage.setItem('formData', JSON.stringify(data));

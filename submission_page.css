@@ -20,12 +20,6 @@ p{
     margin-top: 10px;
   }
 
-/* input[type="radio"] {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    width
-} */
-
 label {
     display: block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -49,9 +43,33 @@ label {
 #button{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
-    margin-left: 730px;
     background-color: white;
 }
 #button:hover {
     background-color: rgb(246, 244, 224);
 }
+
+/* Styling navagation bar */
+ul {
+    text-align: center;
+    list-style-type: none;
+    background-color: rgb(212, 210, 188);
+    overflow: hidden;
+    padding: 1%;
+    margin-bottom: 2%;
+    margin-left: 42%;
+    margin-right: 42%;
+ }
+ li {
+   display: inline;
+ }
+ li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    padding: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2%;
+ }
+ li a:hover {
+    background-color: rgb(246, 244, 224);
