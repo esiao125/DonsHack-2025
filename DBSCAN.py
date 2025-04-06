@@ -80,8 +80,9 @@ class DBScan:
             if self.isCore[neighbor] or len(cousins) >= self.min_neighbors:
                 new_cores.append(neighbor)
                 self.isCore[neighbor] = True
+                self.labels[neighbor] = self.numClusters + 1
 
-                #Note: cousins cannot change isCore
+                #only check neighbors of new cores
                 for cousin in cousins:
                     # keep track of neighboring labels for cores
                     if self.labels[cousin] > 0 and self.labels[cousin] not in neighbor_labels:

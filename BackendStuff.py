@@ -1,45 +1,31 @@
-#pip install sentence_transformers
-#pip install torch
-#(I don't remember if this one is required) pip install hf_xet
-#from transformers import BertTokenizer, BertModel
 from sentence_transformers import SentenceTransformer
 import numpy as np
-
 import DBSCAN
 from DBSCAN import DBScan
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
-db = DBScan(3, 0.37)
+db = DBScan(3, 0.38)
 
+thing_to_do = 0
 
-#FOR TESTING
-thingy = 0
-
-if not thingy:
-    with open("TestReports.txt", 'r') as f:
-        i = 1
+if thing_to_do == 0:
+    with open("Log.txt", 'r') as f:
         for line in f:
-            print("\n----------\nINPUT:", i, "\n----------\n")
+            if line == "":
+                continue
+
             embedding = model.encode(line)
             embedding /= np.linalg.norm(embedding)
 
-            print(np.shape(embedding), ":\n", embedding)
-
             db.add(embedding)
 
-            i += 1
-
-
-    print("--------------------------------------------------------")
-    db.save()
-    print(db.mat)
-    print(db.numClusters)
-    print("--------------------------------------------------------")
-    print(db.labels)
+        db.save()
 
 else:
     db.load()
-    print(db.numClusters)
+
+    print(db.labels)
+    print(db.isCore)
     print("--------------------------------------------------------")
 
     for i in range(len(db.mat)):

@@ -15,46 +15,16 @@ p{
     font-size: 32px;
 }
 
-#submitted {
-    display: none;
-    color: green;
-    margin-top: 10px;
-  }
+p strong, p b{
+    font-weight: 10000;
+    color: darkblue;
+}
 
 label {
     display: block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 32px;
+    font-size: 16px;
     margin-bottom: 5px;
-    margin: 16px 0;
-}
-
-#place{
-    width: 250px;
-    height: 40px;
-    font-size: 20px;
-}
-
-
-#issue {
-    display: block;
-    width: 700px;
-    height: 300px;
-    margin: 20px auto;
-    font-size: 32px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 5px;
-    vertical-align: top;
-    resize: vertical;
-}
-
-#button{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 32px;
-    background-color: white;
-}
-#button:hover {
-    background-color: rgb(246, 244, 224);
 }
 
 /* Styling navagation bar */

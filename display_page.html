@@ -8,28 +8,32 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	  <!-- link the webpage's stylesheet -->
-	  <link rel="stylesheet" href="submission_page.css" />
+	  <link rel="stylesheet" href="display_page.css" />
 
 	  <!-- link the webpage's JavaScript file -->
-	  <script src="submission_page.js" defer>
+	  <script src="display_page.js" defer>
 
     </script>
   </head>
   <body>
-  <h1>Most requested maintenance</h1>
+    <h1>Most requested maintenance</h1>
 
+    <nav>
+      <ul>
+        <li>
+          <a href="submission_page.html">File a facilities report</a>
+        </li>
+        <li>
+          <a href="display_page.html">Requests</a>
+        </li>
+      </ul>
+    </nav>
 
-<nav>
-    <ul>
-      <li>
-        <a href="submission_page.html">File a facilities report</a>
-      </li>
-      <li>
-        <a href="display_page.html">Requests</a>
-      </li>
-    </ul>
-  </nav>
+    <div id="results">
+      <p id="1st"></p>
+      <p id="2nd"></p>
+      <p id="3rd"></p>
+    </div>
 
-
-</body>
+  </body>
 </html>
