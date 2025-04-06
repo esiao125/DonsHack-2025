@@ -17,6 +17,7 @@ if __name__ == "__main__":
 """
 Javascript Side:
 
+
 window.onload = function() {
     const data = {
         param1: 'value1',
