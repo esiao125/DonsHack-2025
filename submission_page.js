@@ -1,3 +1,24 @@
+window.onload = function() {
+    const data = {
+        param1: 'value1',
+        param2: 'value2'
+    };
+
+    fetch('/run-script', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)  // Send data as JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.result);  // Process the output
+        document.getElementById('output').innerText = data.result;
+    })
+    .catch(error => console.error('Error:', error));
+
+
 var issue = document.getElementById("issue");
 var form = document.getElementById("form");
 var submitted = document.getElementById("submitted");
@@ -7,29 +28,31 @@ if(form){
     form.addEventListener("submit", function(event) {
         event.preventDefault(); 
 
-        function saveToJson() {
-            const data = {
-                "Location": place.value,
-                "Issue": issue.value
-            };
+        // function saveToJson() {
+        //     const data = {
+        //         "Location": place.value,
+        //         "Issue": issue.value
+        //     };
 
-            var jsonBlob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        //     var jsonBlob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
 
 
-            var link = document.createElement('a');
-            link.href = URL.createObjectURL(jsonBlob);
-            link.download = 'user_data.json';
-            link.click();  // Trigger the download automatically
+        //     var link = document.createElement('a');
+        //     link.href = URL.createObjectURL(jsonBlob);
+        //     link.download = 'user_data.json';
+        //     link.click();  // Trigger the download automatically
 
-            // Save the data in localStorage for later use
-            localStorage.setItem('formData', JSON.stringify(data));
+        //     // Save the data in localStorage for later use
+        //     localStorage.setItem('formData', JSON.stringify(data));
 
-            console.log('Saved data to localStorage:', data);
-        }
+        //     console.log('Saved data to localStorage:', data);
+        // }
 
-        // Call saveToJson to handle the form submission
-        saveToJson();
+        // // Call saveToJson to handle the form submission
+        // saveToJson();
 
+
+        
         // Display the "submitted" message
         submitted.style.display = 'block';
 
@@ -43,3 +66,4 @@ if(form){
         }, 3000);
     });
 }
+};
